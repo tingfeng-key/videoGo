@@ -12,6 +12,7 @@ func RouteInit()  {
 		Extensions: []string{".tmpl", ".html"},
 	}))
 	m.Get("/", controllers.VideoIndex)
+	m.Get("/systemInit", controllers.SystemInit)
 	m.Get("/category/:id", controllers.VideoCategory)
 	m.Get("/info/:id", controllers.VideoInfo)
 	m.RunOnAddr(":8080")

@@ -7,6 +7,6 @@ type Database struct {
 func Db()  Database {
 	db := Database{}
 	db.Type = "mysql"
-	db.Dns = "root:root@/video?charset=utf8"
+	db.Dns = "root:root@/video_go?charset=utf8"
 	return db
 }

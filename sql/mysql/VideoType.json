@@ -1,0 +1,3 @@
+{
+  "videoTypeAll": "SELECT * FROM video_types"
+}

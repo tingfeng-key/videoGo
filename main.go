@@ -1,6 +1,8 @@
 package main
 
-import "videoGo/route"
+import (
+	"videoGo/route"
+)
 
 func main()  {
 	route.RouteInit()

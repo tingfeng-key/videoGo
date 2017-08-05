@@ -1,0 +1,4 @@
+{
+  "videoLimit10": "SELECT * FROM `videos` LIMIT 10",
+  "videoAllByTypeId": "SELECT * FROM `videos` WHERE `type_id`=?typeId LIMIT ?start,?limit"
+}

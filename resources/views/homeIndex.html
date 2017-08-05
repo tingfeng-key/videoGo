@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul class="nav nav-tabs nav-list">
-                    {{range .Category}}
+                    {{range .Categorys}}
                     <li class="presentation">
                         <a href="/category/{{.id}}">{{.name}}</a>
                     </li>
@@ -57,15 +57,15 @@
                         </div>
                     </div>
                     <div class="list-group">
-                        {{range .Result}}
+                        {{range .Items}}
                         <div class="row list-group-item shipin">
                             <div class="col-xs-4">
-                                <a href="" class="thumbnail">
+                                <a href="/info/{{.id}}" class="thumbnail">
                                     <img src="{{.thumb}}" />
                                 </a>
                             </div>
                             <div class="col-xs-8">
-                                <a href="">
+                                <a href="/info/{{.id}}">
                                     <div class="title">{{.title}}</div>
                                 </a>
                             </div>
