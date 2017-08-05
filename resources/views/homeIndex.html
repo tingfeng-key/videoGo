@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.pjax.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="">
+    <header>
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <div class="col-xs-8">
+                <form action="" method="get" class="searchForm input-group">
+                    <input name="title" type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">搜索</button>
+                    </span>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs nav-list">
+                    {{range .Category}}
+                    <li class="presentation">
+                        <a href="/category/{{.id}}">{{.name}}</a>
+                    </li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="row main" id="pjax-container">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body dataList">
+                    <!--热门推荐start-->
+                    <div class="row header">
+                        <div class="col-xs-8">
+                            <h4 class="title">
+                                <span class="hotThumb"></span>
+                                <a href="">热门推荐</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="list-group">
+                        {{range .Result}}
+                        <div class="row list-group-item shipin">
+                            <div class="col-xs-4">
+                                <a href="" class="thumbnail">
+                                    <img src="{{.thumb}}" />
+                                </a>
+                            </div>
+                            <div class="col-xs-8">
+                                <a href="">
+                                    <div class="title">{{.title}}</div>
+                                </a>
+                            </div>
+                        </div>
+                        {{end}}
+                    </div>
+                    <!--热门推荐end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type=""></script>
+</body>
+</html>
